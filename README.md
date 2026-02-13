@@ -29,7 +29,7 @@ El patrón Bridge separa la jerarquía de **abstracciones** (tipos de notificaci
 **Clases principales:**  
 - Abstracción: `Notification`, `BaseNotification`, `MessageNotification`, `AlertNotification`, `WarningNotification`, `ConfirmationNotification`.  
 - Implementación: `NotificationPlatform`, `WebPlatform`, `MobilePlatform`, `DesktopPlatform`.  
-- Cliente: `Main` o `NotificationDemo`, que crea las combinaciones y envía las notificaciones.
+- Cliente: `Main` , que crea las combinaciones y envía las notificaciones.
 
 ***
 
@@ -48,4 +48,5 @@ El patrón Mediator centraliza la comunicación en un objeto mediador (`ChatRoom
 - Cliente: `Main`, que crea la sala de chat, registra los usuarios y simula el envío de mensajes.
 
 ***
+
 
