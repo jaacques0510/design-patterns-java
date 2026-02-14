@@ -52,6 +52,18 @@ Con esta forma de construcción, el código es más claro y fácil de mantener.
     - `conGps(boolean gps)`  
   - Método final `build()` que devuelve el `Automovil` completamente construido.
 
+## Diagrama UML
+
+A continuación se muestra la representación visual del patrón. Se destaca el uso de la **clase anidada (Inner Class)** y el **constructor privado** para garantizar que la creación del objeto sea controlada exclusivamente por el `Builder`.
+
+![Diagrama UML del patrón Builder](uml/diagram.png)
+
+## Justificación técnica del Patrón
+Se implementó el patrón **Builder** porque el escenario requiere la creación de objetos complejos (`Automovil`) con múltiples atributos opcionales. 
+* **Ventaja 1:** Evita el "constructor telescópico".
+* **Ventaja 2:** Garantiza la inmutabilidad del objeto final.
+* **Ventaja 3:** Mejora la legibilidad del código en el cliente (`Main.java`).
+
 ## Requisitos
 
 - Java 21 (o compatible).  
