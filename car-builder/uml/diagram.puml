@@ -1,0 +1,43 @@
+@startuml
+title Patrón Builder - Automóvil Configurable
+
+class Automovil {
+  - String tipoMotor
+  - String color
+  - String llantas
+  - String sistemaSonido
+  - String interiores
+  - boolean techoSolar
+  - boolean gps
+  --
+  - Automovil(Builder)
+  + String toString()
+}
+
+class "Automovil.Builder" as Builder {
+  - String tipoMotor
+  - String color
+  - String llantas
+  - String sistemaSonido
+  - String interiores
+  - boolean techoSolar
+  - boolean gps
+  --
+  + Builder(String, String)
+  + Builder conLlantas(String)
+  + Builder conSistemaSonido(String)
+  + Builder conInteriores(String)
+  + Builder conTechoSolar(boolean)
+  + Builder conGps(boolean)
+  + Automovil build()
+}
+
+Automovil +-- Builder : "clase anidada"
+Builder ..> Automovil : "crea"
+
+note left of Builder
+  **Obligatorios:** tipoMotor, color
+  **Opcionales:** llantas, sonido, 
+  interiores, techo, gps
+end note
+@enduml
